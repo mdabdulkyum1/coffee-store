@@ -4,6 +4,7 @@ import Coffees from "../pages/Coffees/Coffees";
 import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddCoffee from "../pages/AddCoffee/AddCoffee";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "dashboard", 
-                element: <Coffees></Coffees>
+                element: <Dashboard></Dashboard>
             },
             {
                 path: "addCoffee",

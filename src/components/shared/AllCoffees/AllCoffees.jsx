@@ -8,9 +8,9 @@ const AllCoffees = () => {
   return (
     <>
       {coffees.map((coffee) => (
-        <div key={coffee._id}>
+        <div className="bg-[#eceae3] p-4 rounded-lg shadow-md" key={coffee._id}>
           <div
-            className="flex items-center bg-gray-100 p-4 rounded-lg shadow-md"
+            className="flex items-center"
             style={{ maxWidth: "400px" }}
           >
             <img

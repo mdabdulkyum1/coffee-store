@@ -19,7 +19,7 @@ const PopularProducts = () => {
         </div>
       </div>
 
-      <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 mt-8">
+      <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 px-3 md:px-0">
             <AllCoffees></AllCoffees>
       </div>
 

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { CoffeeContext } from "../../providers/CoffeeProviders";
+import Swal from "sweetalert2";
 
 const AddCoffee = () => {
 
@@ -35,7 +36,11 @@ const AddCoffee = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert("success added to database Your coffee")
+              Swal.fire({
+                title: "Success",
+                text: "Successfully added your coffee!",
+                icon: "success"
+              });
                 setCoffees((prevCoffee)=>[...prevCoffee, coffeeInfo])
             }
         })
