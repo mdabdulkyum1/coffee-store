@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AllCoffees from "../shared/AllCoffees/AllCoffees";
 
 const PopularProducts = () => {
   return (
@@ -18,8 +19,8 @@ const PopularProducts = () => {
         </div>
       </div>
 
-      <div className="">
-
+      <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 mt-8">
+            <AllCoffees></AllCoffees>
       </div>
 
     </div>

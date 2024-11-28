@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { CoffeeContext } from "../../providers/CoffeeProviders";
 
 const AddCoffee = () => {
+
+    const {setCoffees} = useContext(CoffeeContext);
+
     const handelAddCoffee = (e) => {
         e.preventDefault();
       
@@ -14,10 +19,11 @@ const AddCoffee = () => {
         const taste = form.taste.value;
         const category = form.category.value;
         const details = form.details.value;
+        const price = form.price.value;
         const photo = form.photo.value;
       
         // Creating an object with all the collected data
-        const coffeeInfo = { coffeeName, chef, supplier, taste, category, details, photo };
+        const coffeeInfo = { coffeeName, chef, supplier, taste, category, details, price, photo };
 
         fetch('http://localhost:5000/coffees', {
             method:"POST",
@@ -30,6 +36,7 @@ const AddCoffee = () => {
         .then(data => {
             if(data.insertedId){
                 alert("success added to database Your coffee")
+                setCoffees((prevCoffee)=>[...prevCoffee, coffeeInfo])
             }
         })
       };
@@ -136,6 +143,19 @@ const AddCoffee = () => {
                   className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d2b48c]"
                 />
               </div>
+            </div>
+            {/* Price */}
+            <div>
+              <label htmlFor="photo" className="block text-[#3b3b3b] mb-2">
+                Price
+              </label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                placeholder="Price$"
+                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d2b48c]"
+              />
             </div>
             {/* Photo URL */}
             <div>
