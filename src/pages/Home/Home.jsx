@@ -1,7 +1,11 @@
+import Banner from "../../components/shared/Banner/Banner"
 
 function Home() {
   return (
-    <div>Home</div>
+    
+    <>
+      <Banner></Banner>
+    </>
   )
 }
 

@@ -12,6 +12,7 @@ export default {
       },
       backgroundImage:{
         'navbarBg': "url('/src/assets/more/navbarBg.jpg')",
+        'coffee-cupBg': "url('/src/assets/more/3.png')"
       }
     },
   },
