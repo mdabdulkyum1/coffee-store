@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      color: {
-          'coffee': '#372727,',
+      colors: {
+          'coffee': '#372727',
           'coffeeBtn': '#e3b577'
       },
       backgroundImage:{
