@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active{
+    border: 2px solid #5c4738 !important; 
+    border-radius: 8px !important;
+    background-color: #d4a373 !important; 
+    color: #372727 !important; 
+    font-weight: bold !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+  a.active:hover {
+    background-color: white !important;
+    border-color: #d4a373 !important;
+  }
+  
