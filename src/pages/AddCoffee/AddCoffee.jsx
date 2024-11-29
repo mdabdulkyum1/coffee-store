@@ -42,6 +42,7 @@ const AddCoffee = () => {
                 icon: "success"
               });
                 setCoffees((prevCoffee)=>[...prevCoffee, {_id:data.insertedId, ...coffeeInfo} ])
+                form.reset();
             }
         })
       };
