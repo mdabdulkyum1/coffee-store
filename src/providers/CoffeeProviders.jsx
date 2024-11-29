@@ -7,7 +7,7 @@ const CoffeeProviders = ({ children }) => {
   const [coffees, setCoffees] = useState([]);
 
   useEffect(() => {
-    fetch("https://coffee-server-nine-eta.vercel.app/coffees/")
+    fetch("https://coffee-server-nine-eta.vercel.app/coffees")
       .then((res) => res.json())
       .then((data) => setCoffees(data));
   }, []);
