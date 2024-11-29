@@ -41,7 +41,7 @@ const AddCoffee = () => {
                 text: "Successfully added your coffee!",
                 icon: "success"
               });
-                setCoffees((prevCoffee)=>[...prevCoffee, coffeeInfo])
+                setCoffees((prevCoffee)=>[...prevCoffee, {_id:data.insertedId, ...coffeeInfo} ])
             }
         })
       };

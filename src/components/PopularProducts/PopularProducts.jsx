@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import AllCoffees from "../shared/AllCoffees/AllCoffees";
+import { useContext } from "react";
+import { CoffeeContext } from "../../providers/CoffeeProviders";
 
 const PopularProducts = () => {
+  const {coffees} = useContext(CoffeeContext);
   return (
     <div className="my-12 bg-productBg bg-cover bg-no-repeat">
       <div className="text-center">
@@ -20,7 +23,14 @@ const PopularProducts = () => {
       </div>
 
       <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 px-3 md:px-0">
-            <AllCoffees></AllCoffees>
+            {
+              coffees.length === 0 ? <>
+              <div className="skeleton h-32 w-full"></div>
+              <div className="skeleton h-32 w-full"></div>
+              </> :
+              <AllCoffees></AllCoffees>
+            }
+            
       </div>
 
     </div>
