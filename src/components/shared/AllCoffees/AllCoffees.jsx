@@ -18,7 +18,7 @@ const AllCoffees = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffees/${_id}`, {
+        fetch(`https://coffee-server-nine-eta.vercel.app/coffees/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -40,7 +40,7 @@ const AllCoffees = () => {
   };
 
   const handelCoffeeDetails = (_id) => {
-    fetch(`http://localhost:5000/coffees/${_id}`);
+    fetch(`https://coffee-server-nine-eta.vercel.app/coffees/${_id}`);
   };
   const handelCoffeeUpdate = async (_id) => {
     const { value: formValues } = await Swal.fire({
@@ -175,7 +175,7 @@ const AllCoffees = () => {
           photo,
         };
 
-        fetch(`http://localhost:5000/coffees/${_id}`, {
+        fetch(`https://coffee-server-nine-eta.vercel.app/coffees/${_id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

@@ -26,7 +26,7 @@ const AddCoffee = () => {
         // Creating an object with all the collected data
         const coffeeInfo = { coffeeName, chef, supplier, taste, category, details, price, photo };
 
-        fetch('https://coffee-server-chi-rosy.vercel.app/coffees', {
+        fetch('https://coffee-server-nine-eta.vercel.app/coffees', {
             method:"POST",
             headers:{
                 "content-type":"application/json"
